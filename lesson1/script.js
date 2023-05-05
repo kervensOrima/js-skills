@@ -1,3 +1,4 @@
+
 var my_var = "null"
 var my_var_1 = "undefined ehe  w929"
 
@@ -6,6 +7,7 @@ console.log(my_var_1.search(' ehe'))
 console.log(my_var_1.slice(0, 5))
 console.log(my_var_1.split(' '))
 console.log(my_var_1.trim())
+console.log(2**3)
 
 
 const words = ['Merder', 'Shit', 'Merde', 'Fuck', 'Bitch', 'Other']
@@ -15,7 +17,6 @@ const theWords = words.map(word => word.toLowerCase())
 const treatWord = (value = '') => {
     if (value.length > 0) {
         let lowerValue = value.toLowerCase()
-
         theWords.forEach(badWord => {
             if (lowerValue.includes(badWord)) {
                 lowerValue = lowerValue.replace(badWord, numberOfStars(badWord))
@@ -27,7 +28,6 @@ const treatWord = (value = '') => {
 }
 
 const numberOfStars = (badWord) => {
-    console.log(badWord.length)
     let stars = ''
     for (let index = 0; index < badWord.length; index++) {
         stars += '*'
@@ -35,4 +35,4 @@ const numberOfStars = (badWord) => {
     return stars
 }
 
-console.log(treatWord(`Hello world Merde, i m ORIMA Kervens a professional web developper!! Fuck.`))
+console.log(treatWord(`Fuck you bitch`))
